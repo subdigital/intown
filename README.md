@@ -20,19 +20,25 @@ Or install it yourself as:
 
 Set your "app_id" configuration before making any calls.  In a Rails app, this would go in `config/initializers/tourbus.rb`.
 
-    Tourbus.configure do |config|
-		  config.app_id = <YOUR APP ID HERE>
-		end		
+```ruby
+Tourbus.configure do |config|
+  config.app_id = <YOUR APP ID HERE>
+end
+```
 
 ### Fetching an artist
 
-    Tourbus::Artist.fetch(params)
+```ruby
+Tourbus::Artist.fetch(params)
+```
 
 Params should be one of the following:
 
-    {:name => "Radiohead"}
-		{:mbid => "<band's MusicBrainz ID>"}
-		{:fbid => "<band's Facebook page ID>"}
+```ruby
+{:name => "Radiohead"}
+{:mbid => "<band's MusicBrainz ID>"}
+{:fbid => "<band's Facebook page ID>"}
+```
 
 Returns an object that responds to the API attributes in the [Bandsintown API documentation](http://www.bandsintown.com/api/responses#artist-json)
 
@@ -40,14 +46,18 @@ Returns nil if the band cannot be found.
 
 ### Fetching events for an artist
 
-    Tourbus::Event.list(params)
+```ruby
+Tourbus::Event.list(params)
+```
 
 Params should identify the artist to search for (see above).  Params may also include one of the following date options:
 
-	 {:upcoming => true}        # default: only returns future events
-	 {:all => true}             # returns all events for this artist
-	 {:date => 3.days.from_now} # returns all events on the specified date
-	 {:from => 3.days.ago, :to => 5.days.from_now } # returns all events in the date range (inclusive)
+```ruby
+{:upcoming => true}        # default: only returns future events
+{:all => true}             # returns all events for this artist
+{:date => 3.days.from_now} # returns all events on the specified date
+{:from => 3.days.ago, :to => 5.days.from_now } # returns all events in the date range (inclusive)
+```
 
 Returns an object that responds to the API attributes in the [Bandsintown API documentation](http://www.bandsintown.com/api/responses#event-json)
 
@@ -59,8 +69,9 @@ Returns nil if the band does not exist.
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+4. Write Tests
+5. Push to the branch (`git push origin my-new-feature`)
+6. Create new Pull Request
 
 ## License
 
