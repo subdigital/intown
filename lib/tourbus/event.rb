@@ -10,8 +10,9 @@ module Tourbus
       end
 
       def date_options(params)
-        return format_date(params[:date]) if params[:date]
-        nil
+        return {:date => format_date(params[:date])} if params[:date]
+        return {:date => "#{format_date(params[:from])},#{format_date(params[:to])}"} if params[:from] && params[:to]
+        {}
       end
 
       def format_date(date)

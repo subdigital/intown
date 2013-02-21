@@ -10,7 +10,6 @@ describe Tourbus::Event do
     it "should return nil" do
       VCR.use_cassette("fetch events for unknown band") do
         events = Tourbus::Event.list(:name => "GoobleGobble124")
-        puts events
         events.should be_nil
       end
     end
@@ -20,7 +19,7 @@ describe Tourbus::Event do
     it "should return nil" do
       VCR.use_cassette("fetch events for known band") do
         events = Tourbus::Event.list(:name => "Blame Sally")
-        puts events
+        events.length.should >= 0
       end
     end
   end
