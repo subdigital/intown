@@ -28,6 +28,9 @@ describe Tourbus::Artist do
       VCR.use_cassette("find_artist_by_name") do
         artist = Tourbus::Artist.fetch(:name => "My Morning Jacket")
         artist.name.should == "My Morning Jacket"
+        artist.upcoming_events_count.should_not be_nil
+        artist.image_url.should_not be_nil
+        artist.mbid.should_not be_nil
       end
     end
   end
