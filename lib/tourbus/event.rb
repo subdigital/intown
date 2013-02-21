@@ -3,9 +3,19 @@ module Tourbus
     class << self
       def list(params)
         identifier = artist_identifier(params)
+        event_params = options.merge(date_options(params))
         url = "/artists/#{URI.encode(identifier)}/events"
-        response = get(url, options)
+        response = get(url, event_params)
         process_response(response)
+      end
+
+      def date_options(params)
+        return format_date(params[:date]) if params[:date]
+        nil
+      end
+
+      def format_date(date)
+        date.strftime("%Y-%m-%d")
       end
     end
   end

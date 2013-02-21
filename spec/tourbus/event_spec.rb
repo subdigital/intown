@@ -12,4 +12,17 @@ describe Tourbus::Event do
       Tourbus::Event.list(:name => "Radiohead")
     end
   end
+
+  context "Searching by date range" do
+    before :each do
+      Tourbus::Event.should_receive(:get).with(anything, hash_including(expected_params))
+    end
+    context "single date" do
+      let(:expected_params) {{ :date => '2013-03-02' }}
+      it "should format the date in the url" do
+        params = { :name => "Radiohead", :date => Time.new(2013, 03, 02) }
+        Tourbus::Event.list(params)
+      end
+    end
+  end
 end
