@@ -1,16 +1,16 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'tourbus/version'
+require 'intown/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "tourbus"
-  gem.version       = Tourbus::VERSION
+  gem.name          = "intown"
+  gem.version       = Intown::VERSION
   gem.authors       = ["Ben Scheirman"]
   gem.email         = ["ben@scheirman.com"]
   gem.description   = %q{A client for the Bandsintown API.}
   gem.summary       = %q{Supports Bandsintown API version 1.1}
-  gem.homepage      = "https://github.com/subdigital/tourbus"
+  gem.homepage      = "https://github.com/subdigital/intown"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
