@@ -25,6 +25,21 @@ module Tourbus
         end
         nil
       end
+
+      def artist_identifier(params)
+        return musicbrainz_identifier(params[:mbid]) if params[:mbid]
+        return facebook_identifier(params[:fbid]) if params[:fbid]
+        return params[:name] if params[:name]
+        raise ArgumentError, "params must contain one of mbid, fbid, or name"
+      end
+
+      def musicbrainz_identifier(mbid)
+        "mbid_#{mbid}"
+      end
+
+      def facebook_identifier(fbid)
+        "fbid_#{fbid}"
+      end
     end
   end
 end
