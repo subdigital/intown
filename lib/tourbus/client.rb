@@ -18,6 +18,23 @@ module Tourbus
         }
       end
 
+      def process_response(response)
+        case response.code
+        when 500 then raise Tourbus::InvalidRequestError, response.body
+        when 404 then process_not_found(response)
+        else
+          json_response = JSON.parse(response.body)
+
+          if json_response.is_a? Hash
+            Hashie::Mash.new(json_response)
+          elsif json_response.is_a? Array
+            json_response.map {|e| Hashie::Mash.new(e)}
+          else
+            json_response
+          end
+        end
+      end
+
       def process_not_found(response)
         json = JSON.parse(response.body)
         if errors = json['errors']

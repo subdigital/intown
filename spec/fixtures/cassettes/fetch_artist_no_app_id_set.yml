@@ -13,22 +13,22 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Thu, 21 Feb 2013 00:31:03 GMT
+      - Thu, 21 Feb 2013 20:11:49 GMT
       Server:
       - Mongrel 1.1.5
-      Cache-Control:
-      - no-cache
       Content-Length:
       - '40'
       Content-Type:
       - application/json; charset=utf-8
       X-Runtime:
-      - '0.01076'
+      - '0.02046'
       Status:
       - 404 Not Found
+      Cache-Control:
+      - no-cache
       Set-Cookie:
-      - _session_id=e7fc60aecf0a9d91ad26bace0b1fe62f; path=/; expires=Wed, 20 Mar
-        2013 23:31:07 GMT
+      - _session_id=04cd7ac85a121e74bfb474f94f04c501; path=/; expires=Thu, 21 Mar
+        2013 19:11:49 GMT
       Vary:
       - Accept-Encoding
       Connection:
@@ -39,5 +39,5 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Thu, 21 Feb 2013 00:31:07 GMT
+  recorded_at: Thu, 21 Feb 2013 20:11:49 GMT
 recorded_with: VCR 2.4.0

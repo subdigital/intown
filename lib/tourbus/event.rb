@@ -1,13 +1,12 @@
 module Tourbus
-  class Artist < Client
+  class Event < Client
     class << self
-      def fetch(params)
+      def list(params)
         identifier = artist_identifier(params)
-        response = get("/artists/#{URI.encode(identifier)}", options)
+        url = "/artists/#{URI.encode(identifier)}/events"
+        response = get(url, options)
         process_response(response)
       end
-
     end
   end
 end
-

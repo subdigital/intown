@@ -13,32 +13,32 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 21 Feb 2013 00:31:12 GMT
+      - Thu, 21 Feb 2013 20:11:50 GMT
       Server:
       - Mongrel 1.1.5
-      Content-Type:
-      - application/json; charset=utf-8
-      Content-Length:
-      - '310'
-      Status:
-      - 200 OK
       Etag:
-      - ! '"fbe55cb891ef55f0f9e6ab5a29ef70a1"'
+      - ! '"f71ae1412f3e37311757d098764b8aad"'
       Cache-Control:
       - private, max-age=0, must-revalidate
+      Status:
+      - 200 OK
       X-Runtime:
-      - '0.02710'
+      - '0.04589'
+      Content-Length:
+      - '310'
+      Content-Type:
+      - application/json; charset=utf-8
       Set-Cookie:
-      - _session_id=8e7d146520c045db205aaa79b70f7e8d; path=/; expires=Wed, 20 Mar
-        2013 23:31:15 GMT
+      - _session_id=b50f066fa543a15f617acfe11a075bb2; path=/; expires=Thu, 21 Mar
+        2013 19:11:50 GMT
       Vary:
       - Accept-Encoding
       Connection:
       - close
     body:
       encoding: US-ASCII
-      string: ! '{"upcoming_events_count":0,"thumb_url":"http:\/\/www.bandsintown.com\/MyMorningJacket\/photo\/small.jpg","name":"My
-        Morning Jacket","image_url":"http:\/\/www.bandsintown.com\/MyMorningJacket\/photo\/medium.jpg","mbid":"ea5883b7-68ce-48b3-b115-61746ea53b8c","facebook_tour_dates_url":"http:\/\/bnds.in\/zTPiUu"}'
+      string: ! '{"mbid":"ea5883b7-68ce-48b3-b115-61746ea53b8c","upcoming_events_count":0,"image_url":"http:\/\/www.bandsintown.com\/MyMorningJacket\/photo\/medium.jpg","thumb_url":"http:\/\/www.bandsintown.com\/MyMorningJacket\/photo\/small.jpg","name":"My
+        Morning Jacket","facebook_tour_dates_url":"http:\/\/bnds.in\/zTPiUu"}'
     http_version: 
-  recorded_at: Thu, 21 Feb 2013 00:31:15 GMT
+  recorded_at: Thu, 21 Feb 2013 20:11:50 GMT
 recorded_with: VCR 2.4.0

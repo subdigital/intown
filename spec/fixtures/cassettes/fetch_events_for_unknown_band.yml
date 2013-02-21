@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.bandsintown.com/artists/Ishouldnotexist?api_version=2.0&app_id=test
+    uri: https://api.bandsintown.com/artists/GoobleGobble124/events?api_version=2.0&app_id=test
     body:
       encoding: US-ASCII
       string: ''
@@ -13,22 +13,22 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Thu, 21 Feb 2013 20:11:50 GMT
+      - Thu, 21 Feb 2013 20:11:51 GMT
       Server:
       - Mongrel 1.1.5
-      Content-Type:
-      - application/json; charset=utf-8
-      X-Runtime:
-      - '0.01188'
       Status:
       - 404 Not Found
       Cache-Control:
       - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
       Content-Length:
       - '30'
+      X-Runtime:
+      - '0.00860'
       Set-Cookie:
-      - _session_id=407c1b0ceec22028ba725603afbe8534; path=/; expires=Thu, 21 Mar
-        2013 19:11:50 GMT
+      - _session_id=5d23778c700fcb71fd14d2061fc20e43; path=/; expires=Thu, 21 Mar
+        2013 19:11:51 GMT
       Vary:
       - Accept-Encoding
       Connection:
@@ -39,5 +39,5 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Thu, 21 Feb 2013 20:11:50 GMT
+  recorded_at: Thu, 21 Feb 2013 20:11:51 GMT
 recorded_with: VCR 2.4.0
