@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bandsintown.com/artists/foobar?api_version=2.0&app_id=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Thu, 21 Feb 2013 00:31:03 GMT
+      Server:
+      - Mongrel 1.1.5
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '40'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.01076'
+      Status:
+      - 404 Not Found
+      Set-Cookie:
+      - _session_id=e7fc60aecf0a9d91ad26bace0b1fe62f; path=/; expires=Wed, 20 Mar
+        2013 23:31:07 GMT
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '{"errors":["app_id param is required"]}
+
+'
+    http_version: 
+  recorded_at: Thu, 21 Feb 2013 00:31:07 GMT
+recorded_with: VCR 2.4.0

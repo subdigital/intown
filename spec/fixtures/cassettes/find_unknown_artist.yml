@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bandsintown.com/artists/Ishouldnotexist?api_version=2.0&app_id=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Thu, 21 Feb 2013 00:31:09 GMT
+      Server:
+      - Mongrel 1.1.5
+      Status:
+      - 404 Not Found
+      Content-Length:
+      - '30'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.03611'
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - _session_id=9c37e09f3cbc2a513384a742b23539f0; path=/; expires=Wed, 20 Mar
+        2013 23:31:11 GMT
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '{"errors":["Unknown Artist"]}
+
+'
+    http_version: 
+  recorded_at: Thu, 21 Feb 2013 00:31:12 GMT
+recorded_with: VCR 2.4.0
