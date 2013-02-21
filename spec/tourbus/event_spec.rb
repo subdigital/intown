@@ -20,17 +20,33 @@ describe Tourbus::Event do
 
     context "single date" do
       let(:expected_params) {{ :date => '2013-03-02' }}
+      let(:input_params)    {{ :name => "Radiohead", :date => Time.new(2013, 3, 2) }}
       it "should format the date in the url" do
-        params = { :name => "Radiohead", :date => Time.new(2013, 3, 2) }
-        Tourbus::Event.list(params)
+        Tourbus::Event.list(input_params)
       end
     end
 
     context "date range" do
       let(:expected_params) {{ :date => '2013-03-02,2013-03-08' }}
+      let(:input_params)    {{ :name => "Radiohead", :from => Time.new(2013, 3, 2), :to => Time.new(2013, 3, 8)}}
       it "should format the date range from to/from date params" do
-        params = {:name => "Radiohead", :from => Time.new(2013, 3, 2), :to => Time.new(2013, 3, 8)}
-        Tourbus::Event.list(params)
+        Tourbus::Event.list(input_params)
+      end
+    end
+    
+    context "upcoming" do
+      let(:expected_params) {{ :date => 'upcoming' }}
+      let(:input_params)    {{ :name => "Radiohead", :upcoming => true}}
+      it "should set the date parameter to upcoming" do
+        Tourbus::Event.list(input_params)
+      end
+    end
+    
+    context "all" do
+      let(:expected_params) {{ :date => 'all' }}
+      let(:input_params)    {{ :name => "Radiohead", :all => true}}
+      it "should set the date parameter to all" do
+        Tourbus::Event.list(input_params)
       end
     end
   end

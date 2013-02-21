@@ -12,6 +12,8 @@ module Tourbus
       def date_options(params)
         return {:date => format_date(params[:date])} if params[:date]
         return {:date => "#{format_date(params[:from])},#{format_date(params[:to])}"} if params[:from] && params[:to]
+        return {:date => "upcoming"} if params[:upcoming] == true
+        return {:date => "all"} if params[:all] == true
         {}
       end
 
