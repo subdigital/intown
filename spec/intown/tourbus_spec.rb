@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Tourbus do
+describe Intown do
   it "should define a version" do
-    Tourbus::VERSION.should_not be_nil
+    Intown::VERSION.should_not be_nil
   end
 end

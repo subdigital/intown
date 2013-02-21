@@ -1,4 +1,4 @@
-module Tourbus
+module Intown
   class Configuration
     attr_accessor :app_id
   end

@@ -1,4 +1,4 @@
-# Tourbus
+# Intown
 
 A gem to consume the Bandsintown 2.0 API.  Supports finding artists by name, MusicBrainz ID, & Facebook Page Id.  Supports returning events by artist & optional date range.
 
@@ -6,7 +6,7 @@ A gem to consume the Bandsintown 2.0 API.  Supports finding artists by name, Mus
 
 Add this line to your application's Gemfile:
 
-    gem 'tourbus'
+    gem 'intown'
 
 And then execute:
 
@@ -14,14 +14,14 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install tourbus
+    $ gem install intown
 
 ## Usage
 
-Set your "app_id" configuration before making any calls.  In a Rails app, this would go in `config/initializers/tourbus.rb`.
+Set your "app_id" configuration before making any calls.  In a Rails app, this would go in `config/initializers/intown.rb`.
 
 ```ruby
-Tourbus.configure do |config|
+Intown.configure do |config|
   config.app_id = <YOUR APP ID HERE>
 end
 ```
@@ -29,7 +29,7 @@ end
 ### Fetching an artist
 
 ```ruby
-Tourbus::Artist.fetch(params)
+Intown::Artist.fetch(params)
 ```
 
 Params should be one of the following:
@@ -47,7 +47,7 @@ Returns nil if the band cannot be found.
 ### Fetching events for an artist
 
 ```ruby
-Tourbus::Event.list(params)
+Intown::Event.list(params)
 ```
 
 Params should identify the artist to search for (see above).  Params may also include one of the following date options:

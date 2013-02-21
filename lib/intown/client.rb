@@ -2,7 +2,7 @@ require 'httparty'
 require 'json'
 require 'hashie'
 
-module Tourbus
+module Intown
   class Client
     include HTTParty
     API_VERSION = 2.0
@@ -13,14 +13,14 @@ module Tourbus
       def options
         {
           :query => {
-             :app_id => Tourbus.configuration.app_id, :api_version => API_VERSION 
+             :app_id => Intown.configuration.app_id, :api_version => API_VERSION 
           }
         }
       end
 
       def process_response(response)
         case response.code
-        when 500 then raise Tourbus::InvalidRequestError, response.body
+        when 500 then raise Intown::InvalidRequestError, response.body
         when 404 then process_not_found(response)
         else
           json_response = JSON.parse(response.body)
@@ -38,7 +38,7 @@ module Tourbus
       def process_not_found(response)
         json = JSON.parse(response.body)
         if errors = json['errors']
-          raise Tourbus::InvalidRequestError, "app_id is required for this request" if errors.any? {|e| e =~ /app_id param is required/}
+          raise Intown::InvalidRequestError, "app_id is required for this request" if errors.any? {|e| e =~ /app_id param is required/}
         end
         nil
       end

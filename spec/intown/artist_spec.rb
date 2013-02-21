@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Tourbus::Artist do
+describe Intown::Artist do
   let(:response) {
     stub(:code => 200,
          :body => '{
@@ -16,28 +16,28 @@ describe Tourbus::Artist do
 
   context "searching by name" do
     it "should put the name in the artist url" do
-      Tourbus::Artist.should_receive(:get).with(/\/artists\/Nirvana/, anything).and_return(response)
-      Tourbus::Artist.fetch(:name => "Nirvana")
+      Intown::Artist.should_receive(:get).with(/\/artists\/Nirvana/, anything).and_return(response)
+      Intown::Artist.fetch(:name => "Nirvana")
     end
   end
 
   context "searching by name with spaces" do
     it "should url encode the spaces" do
-      Tourbus::Artist.should_receive(:get).with(/\/artists\/Foo%20Fighters/, anything).and_return(response)
-      Tourbus::Artist.fetch(:name => "Foo Fighters")
+      Intown::Artist.should_receive(:get).with(/\/artists\/Foo%20Fighters/, anything).and_return(response)
+      Intown::Artist.fetch(:name => "Foo Fighters")
     end
   end
 
   context "searching by musicbrainz id" do
     it "should format the musicbrainz id in the url" do
-      Tourbus::Artist.should_receive(:get).with(/\/artists\/mbid_1234567890abcd/, anything).and_return(response)
-      Tourbus::Artist.fetch(:mbid => "1234567890abcd")
+      Intown::Artist.should_receive(:get).with(/\/artists\/mbid_1234567890abcd/, anything).and_return(response)
+      Intown::Artist.fetch(:mbid => "1234567890abcd")
     end
   end
 
   context "searching with invalid params" do
     it "should raise an argument error" do
-      expect { Tourbus::Artist.fetch(:foo_bar => "baz") }.to raise_error ArgumentError
+      expect { Intown::Artist.fetch(:foo_bar => "baz") }.to raise_error ArgumentError
     end
   end
 

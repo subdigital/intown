@@ -1,4 +1,4 @@
-module Tourbus
+module Intown
   class Event < Client
     class << self
       def list(params)

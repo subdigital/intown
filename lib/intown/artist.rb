@@ -1,4 +1,4 @@
-module Tourbus
+module Intown
   class Artist < Client
     class << self
       def fetch(params)
@@ -6,8 +6,6 @@ module Tourbus
         response = get("/artists/#{URI.encode(identifier)}", options)
         process_response(response)
       end
-
     end
   end
 end
-
