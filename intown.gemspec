@@ -23,5 +23,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'pry'
 
   gem.add_dependency 'httparty', '~> 0.10.0'
-  gem.add_dependency 'hashie', '~> 2.0.0'
+  gem.add_dependency 'hashie', '> 1.2.0'
 end
