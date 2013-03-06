@@ -4,7 +4,7 @@ module Intown
       def list(params)
         identifier = artist_identifier(params)
         event_params = options.merge(date_options(params))
-        url = "/artists/#{URI.encode(identifier)}/events"
+        url = "/artists/#{identifier}/events"
         response = get(url, event_params)
         process_response(response)
       end
