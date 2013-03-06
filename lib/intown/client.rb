@@ -22,6 +22,7 @@ module Intown
         case response.code
         when 500 then raise Intown::InvalidRequestError, response.body
         when 404 then process_not_found(response)
+        when 406 then process_not_acceptable(response)
         else
           json_response = JSON.parse(response.body)
 
@@ -33,6 +34,10 @@ module Intown
             json_response
           end
         end
+      end
+      
+      def process_not_acceptable(response)
+        raise Intown::InvalidRequestError, "Bandsintown rejected your request.  Please check your input parameters."
       end
 
       def process_not_found(response)
