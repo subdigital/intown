@@ -3,7 +3,7 @@ module Intown
     class << self
       def fetch(params)
         identifier = artist_identifier(params)
-        response = get("/artists/#{URI.encode(identifier)}", options)
+        response = get("/artists/#{identifier}", options)
         process_response(response)
       end
     end

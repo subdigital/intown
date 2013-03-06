@@ -46,8 +46,13 @@ module Intown
       def artist_identifier(params)
         return musicbrainz_identifier(params[:mbid]) if params[:mbid]
         return facebook_identifier(params[:fbid]) if params[:fbid]
-        return params[:name] if params[:name]
+        return encode_name(params[:name]) if params[:name]
         raise ArgumentError, "params must contain one of mbid, fbid, or name"
+      end
+      
+      def encode_name(name)
+        # periods & slashes cause the API to blow up
+        URI.encode(name).gsub(/\./, "%2E").gsub(/\//, "%2F")
       end
 
       def musicbrainz_identifier(mbid)
