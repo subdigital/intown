@@ -37,8 +37,8 @@ describe Intown::Artist do
     end
     
     context "searching by name with a /" do
-      it "should encode the slash" do
-        Intown::Artist.should_receive(:get).with(/\/artists\/Is%2FIs/, anything).and_return(response)
+      it "should double encode the slash" do
+        Intown::Artist.should_receive(:get).with(/\/artists\/Is%252FIs/, anything).and_return(response)
         Intown::Artist.fetch(:name => "Is/Is")
       end
     end
