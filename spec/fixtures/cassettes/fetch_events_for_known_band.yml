@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.bandsintown.com/artists/Blame%20Sally/events?api_version=2.0&app_id=test
+    uri: https://api.bandsintown.com/artists/Blame%20Sally/events?api_version=2.0&app_id=test&format=json
     body:
       encoding: US-ASCII
       string: ''
@@ -13,50 +13,79 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 21 Feb 2013 20:15:44 GMT
+      - Mon, 22 Apr 2013 22:11:26 GMT
       Server:
       - Mongrel 1.1.5
-      Etag:
-      - ! '"8f78b9ff373c3291535e34a9c28a2d67"'
       Content-Length:
-      - '5768'
-      Cache-Control:
-      - private, max-age=0, must-revalidate
+      - '6902'
       X-Runtime:
-      - '0.06541'
-      Status:
-      - 200 OK
+      - '0.05485'
       Content-Type:
       - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Etag:
+      - ! '"0be1771512632186d38077daa208e023"'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
       Set-Cookie:
-      - _session_id=09b05e580a4b65a836214fc870b5b76b; path=/; expires=Thu, 21 Mar
-        2013 19:15:44 GMT
+      - _session_id=31277a54fa280474196ef08680150c0b; path=/; expires=Wed, 22 May
+        2013 22:11:26 GMT
       Vary:
       - Accept-Encoding
       Connection:
       - close
     body:
       encoding: US-ASCII
-      string: ! '[{"ticket_status":"unavailable","ticket_type":null,"ticket_url":null,"formatted_location":"Chico,
-        CA","formatted_datetime":"Monday, April 15, 2013 at 7:30pm","facebook_rsvp_url":"http:\/\/www.bandsintown.com\/event\/6216225\/facebook_rsvp?app_id=test&artist=Blame+Sally&came_from=67","artists":[{"mbid":"b30ac2b1-a4fc-45a3-98ff-9087a6a10208","name":"Blame
-        Sally","image_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/medium.jpg","facebook_tour_dates_url":"http:\/\/bnds.in\/HQt8jZ","thumb_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/small.jpg"}],"facebook_share_url":"https:\/\/www.facebook.com\/dialog\/feed?actions=%7B%22link%22%3A%22http%3A%5C%2F%5C%2Fwww.bandsintown.com%5C%2Fevent%5C%2F6216225%5C%2Ffacebook_rsvp%3Fartist%3DBlame%2BSally%26came_from%3D78%22%2C%22name%22%3A%22RSVP%22%7D&app_id=123966167614127&caption=Monday%2C+April+15%2C+2013+at+7%3A30pm&description=%26nbsp%3B&link=http%3A%2F%2Fwww.bandsintown.com%2Fevent%2F6216225%2Ffacebook_rsvp%3Fartist%3DBlame%2BSally%26came_from%3D77&name=Blame+Sally+%40+Sierra+Nevada+Brewing+Co.+in+Chico%2C+CA&picture=https%3A%2F%2Fd12nfv3nknyhzq.cloudfront.net%2FBlameSally%2Fphoto%2Flarge.jpg&properties=%7B%22More+Tour+Dates%22%3A%7B%22text%22%3A%22http%3A%5C%2F%5C%2Fbnds.in%5C%2FIgxMaj%22%2C%22href%22%3A%22http%3A%5C%2F%5C%2Fwww.bandsintown.com%5C%2FBlameSally%5C%2Ffacebookapp%3Fcame_from%3D78%22%7D%7D&redirect_uri=http%3A%2F%2Fwww.bandsintown.com%2Fevent%2F6216225%2Ffacebook_rsvp%3Fartist%3DBlame%2BSally%26came_from%3D102","title":"Blame
-        Sally @ Sierra Nevada Brewing Co. in Chico, CA","id":"6216225","description":null,"on_sale_datetime":null,"venue":{"country":"United
-        States","name":"Sierra Nevada Brewing Co.","longitude":"-121.8139110","city":"Chico","region":"CA","latitude":"39.7249330"},"datetime":"2013-04-15T19:30:00"},
+      string: ! '[{"venue":{"country":"United States","city":"San Francisco","name":"The
+        Chapel","longitude":"-122.4214360","latitude":"37.7605720","region":"CA"},"description":null,"on_sale_datetime":null,"ticket_url":"http:\/\/www.bandsintown.com\/event\/6431919\/buy_tickets?app_id=test&artist=Blame+Sally","formatted_datetime":"Saturday,
+        April 27, 2013 at 9:00pm","datetime":"2013-04-27T21:00:00","facebook_rsvp_url":"http:\/\/www.bandsintown.com\/event\/6431919\/facebook_rsvp?app_id=test&artist=Blame+Sally&came_from=67","ticket_type":"Tickets","facebook_share_url":null,"artists":[{"name":"Blame
+        Sally","thumb_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/small.jpg","facebook_tour_dates_url":"http:\/\/bnds.in\/HQt8jZ","image_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/medium.jpg","mbid":"b30ac2b1-a4fc-45a3-98ff-9087a6a10208"}],"title":"Blame
+        Sally @ The Chapel in San Francisco, CA","id":"6431919","ticket_status":"available","formatted_location":"San
+        Francisco, CA"},
 
-        {"ticket_status":"unavailable","ticket_type":null,"ticket_url":null,"formatted_location":"Seattle,
-        WA","formatted_datetime":"Friday, April 19, 2013 at 9:00pm","facebook_rsvp_url":"http:\/\/www.bandsintown.com\/event\/6128697\/facebook_rsvp?app_id=test&artist=Blame+Sally&came_from=67","artists":[{"mbid":"b30ac2b1-a4fc-45a3-98ff-9087a6a10208","name":"Blame
-        Sally","image_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/medium.jpg","facebook_tour_dates_url":"http:\/\/bnds.in\/HQt8jZ","thumb_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/small.jpg"}],"facebook_share_url":"https:\/\/www.facebook.com\/dialog\/feed?actions=%7B%22link%22%3A%22http%3A%5C%2F%5C%2Fwww.bandsintown.com%5C%2Fevent%5C%2F6128697%5C%2Ffacebook_rsvp%3Fartist%3DBlame%2BSally%26came_from%3D78%22%2C%22name%22%3A%22RSVP%22%7D&app_id=123966167614127&caption=Friday%2C+April+19%2C+2013+at+9%3A00pm&description=%26nbsp%3B&link=http%3A%2F%2Fwww.bandsintown.com%2Fevent%2F6128697%2Ffacebook_rsvp%3Fartist%3DBlame%2BSally%26came_from%3D77&name=Blame+Sally+%40+The+Triple+Door+in+Seattle%2C+WA&picture=https%3A%2F%2Fd12nfv3nknyhzq.cloudfront.net%2FBlameSally%2Fphoto%2Flarge.jpg&properties=%7B%22More+Tour+Dates%22%3A%7B%22text%22%3A%22http%3A%5C%2F%5C%2Fbnds.in%5C%2FIgxMaj%22%2C%22href%22%3A%22http%3A%5C%2F%5C%2Fwww.bandsintown.com%5C%2FBlameSally%5C%2Ffacebookapp%3Fcame_from%3D78%22%7D%7D&redirect_uri=http%3A%2F%2Fwww.bandsintown.com%2Fevent%2F6128697%2Ffacebook_rsvp%3Fartist%3DBlame%2BSally%26came_from%3D102","title":"Blame
-        Sally @ The Triple Door in Seattle, WA","id":"6128697","description":null,"on_sale_datetime":null,"venue":{"country":"United
-        States","name":"The Triple Door","longitude":"-122.3379440","city":"Seattle","region":"WA","latitude":"47.6084330"},"datetime":"2013-04-19T21:00:00"},
+        {"venue":{"country":"United States","city":"Sacramento","name":"Harlow''s
+        Restaurant and Nightclub","longitude":"-121.4703840","latitude":"38.5740110","region":"CA"},"description":null,"on_sale_datetime":null,"ticket_url":"http:\/\/www.bandsintown.com\/event\/6347303\/buy_tickets?app_id=test&artist=Blame+Sally","formatted_datetime":"Sunday,
+        April 28, 2013 at 7:00pm","datetime":"2013-04-28T19:00:00","facebook_rsvp_url":"http:\/\/www.bandsintown.com\/event\/6347303\/facebook_rsvp?app_id=test&artist=Blame+Sally&came_from=67","ticket_type":"Tickets","facebook_share_url":null,"artists":[{"name":"Blame
+        Sally","thumb_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/small.jpg","facebook_tour_dates_url":"http:\/\/bnds.in\/HQt8jZ","image_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/medium.jpg","mbid":"b30ac2b1-a4fc-45a3-98ff-9087a6a10208"}],"title":"Blame
+        Sally @ Harlow''s Restaurant and Nightclub in Sacramento, CA","id":"6347303","ticket_status":"available","formatted_location":"Sacramento,
+        CA"},
 
-        {"ticket_status":"available","ticket_type":"Tickets","ticket_url":"http:\/\/www.bandsintown.com\/event\/5985466\/buy_tickets?app_id=test&artist=Blame+Sally","formatted_location":"San
-        Francisco, CA","formatted_datetime":"Saturday, May 11, 2013 at 9:00pm","facebook_rsvp_url":"http:\/\/www.bandsintown.com\/event\/5985466\/facebook_rsvp?app_id=test&artist=Blame+Sally&came_from=67","artists":[{"mbid":"b30ac2b1-a4fc-45a3-98ff-9087a6a10208","name":"Blame
-        Sally","image_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/medium.jpg","facebook_tour_dates_url":"http:\/\/bnds.in\/HQt8jZ","thumb_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/small.jpg"}],"facebook_share_url":"https:\/\/www.facebook.com\/dialog\/feed?actions=%7B%22link%22%3A%22http%3A%5C%2F%5C%2Fwww.bandsintown.com%5C%2Fevent%5C%2F5985466%5C%2Ffacebook_rsvp%3Fartist%3DBlame%2BSally%26came_from%3D78%22%2C%22name%22%3A%22RSVP%22%7D&app_id=123966167614127&caption=Saturday%2C+May+11%2C+2013+at+9%3A00pm&description=%26nbsp%3B&link=http%3A%2F%2Fwww.bandsintown.com%2Fevent%2F5985466%2Ffacebook_rsvp%3Fartist%3DBlame%2BSally%26came_from%3D77&name=Blame+Sally+%40+Great+American+Music+Hall+in+San+Francisco%2C+CA&picture=https%3A%2F%2Fd12nfv3nknyhzq.cloudfront.net%2FBlameSally%2Fphoto%2Flarge.jpg&properties=%7B%22Tickets%22%3A%7B%22text%22%3A%22http%3A%5C%2F%5C%2Fbnds.in%5C%2FUNp0bR%22%2C%22href%22%3A%22http%3A%5C%2F%5C%2Fwww.bandsintown.com%5C%2Fevent%5C%2F5985466%5C%2Fbuy_tickets%3Faffil_code%3Dfb_19907696684%26artist%3DBlame%2BSally%22%7D%2C%22More+Tour+Dates%22%3A%7B%22text%22%3A%22http%3A%5C%2F%5C%2Fbnds.in%5C%2FIgxMaj%22%2C%22href%22%3A%22http%3A%5C%2F%5C%2Fwww.bandsintown.com%5C%2FBlameSally%5C%2Ffacebookapp%3Fcame_from%3D78%22%7D%7D&redirect_uri=http%3A%2F%2Fwww.bandsintown.com%2Fevent%2F5985466%2Ffacebook_rsvp%3Fartist%3DBlame%2BSally%26came_from%3D102","title":"Blame
-        Sally @ Great American Music Hall in San Francisco, CA","id":"5985466","description":null,"on_sale_datetime":null,"venue":{"country":"United
-        States","name":"Great American Music Hall","longitude":"-122.4205960","city":"San
-        Francisco","region":"CA","latitude":"37.7943790"},"datetime":"2013-05-11T21:00:00"}]
+        {"venue":{"country":"United States","city":"San Francisco","name":"Great American
+        Music Hall","longitude":"-122.4205960","latitude":"37.7943790","region":"CA"},"description":null,"on_sale_datetime":null,"ticket_url":"http:\/\/www.bandsintown.com\/event\/5985466\/buy_tickets?app_id=test&artist=Blame+Sally","formatted_datetime":"Saturday,
+        May 11, 2013 at 9:00pm","datetime":"2013-05-11T21:00:00","facebook_rsvp_url":"http:\/\/www.bandsintown.com\/event\/5985466\/facebook_rsvp?app_id=test&artist=Blame+Sally&came_from=67","ticket_type":"Tickets","facebook_share_url":null,"artists":[{"name":"Blame
+        Sally","thumb_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/small.jpg","facebook_tour_dates_url":"http:\/\/bnds.in\/HQt8jZ","image_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/medium.jpg","mbid":"b30ac2b1-a4fc-45a3-98ff-9087a6a10208"}],"title":"Blame
+        Sally @ Great American Music Hall in San Francisco, CA","id":"5985466","ticket_status":"available","formatted_location":"San
+        Francisco, CA"},
+
+        {"venue":{"country":"United States","city":"San Diego","name":"AMSD Concerts","longitude":"-117.1183320","latitude":"32.7625810","region":"CA"},"description":null,"on_sale_datetime":null,"ticket_url":"http:\/\/www.bandsintown.com\/event\/6476382\/buy_tickets?app_id=test&artist=Blame+Sally","formatted_datetime":"Friday,
+        June 7, 2013 at 7:30pm","datetime":"2013-06-07T19:30:00","facebook_rsvp_url":"http:\/\/www.bandsintown.com\/event\/6476382\/facebook_rsvp?app_id=test&artist=Blame+Sally&came_from=67","ticket_type":"Tickets","facebook_share_url":null,"artists":[{"name":"Blame
+        Sally","thumb_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/small.jpg","facebook_tour_dates_url":"http:\/\/bnds.in\/HQt8jZ","image_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/medium.jpg","mbid":"b30ac2b1-a4fc-45a3-98ff-9087a6a10208"}],"title":"Blame
+        Sally @ AMSD Concerts in San Diego, CA","id":"6476382","ticket_status":"available","formatted_location":"San
+        Diego, CA"},
+
+        {"venue":{"country":"United States","city":"Santa Monica","name":"McCabe''s
+        Guitar Shop","longitude":"-118.4574280","latitude":"34.0258410","region":"CA"},"description":null,"on_sale_datetime":null,"ticket_url":null,"formatted_datetime":"Saturday,
+        June 8, 2013 at 8:00pm","datetime":"2013-06-08T20:00:00","facebook_rsvp_url":"http:\/\/www.bandsintown.com\/event\/6505411\/facebook_rsvp?app_id=test&artist=Blame+Sally&came_from=67","ticket_type":null,"facebook_share_url":null,"artists":[{"name":"Blame
+        Sally","thumb_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/small.jpg","facebook_tour_dates_url":"http:\/\/bnds.in\/HQt8jZ","image_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/medium.jpg","mbid":"b30ac2b1-a4fc-45a3-98ff-9087a6a10208"}],"title":"Blame
+        Sally @ McCabe''s Guitar Shop in Santa Monica, CA","id":"6505411","ticket_status":"unavailable","formatted_location":"Santa
+        Monica, CA"},
+
+        {"venue":{"country":"United States","city":"Santa Barbara","name":"Live Oak
+        Music Festival","longitude":"-120.0183270","latitude":"34.5883900","region":"CA"},"description":null,"on_sale_datetime":null,"ticket_url":"http:\/\/www.bandsintown.com\/event\/6443960\/buy_tickets?app_id=test&artist=Blame+Sally","formatted_datetime":"Friday,
+        June 14, 2013 at 4:00pm","datetime":"2013-06-14T16:00:00","facebook_rsvp_url":"http:\/\/www.bandsintown.com\/event\/6443960\/facebook_rsvp?app_id=test&artist=Blame+Sally&came_from=67","ticket_type":"Tickets","facebook_share_url":null,"artists":[{"name":"Blame
+        Sally","thumb_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/small.jpg","facebook_tour_dates_url":"http:\/\/bnds.in\/HQt8jZ","image_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/medium.jpg","mbid":"b30ac2b1-a4fc-45a3-98ff-9087a6a10208"}],"title":"Blame
+        Sally @ Live Oak Music Festival in Santa Barbara, CA","id":"6443960","ticket_status":"available","formatted_location":"Santa
+        Barbara, CA"},
+
+        {"venue":{"country":"United States","city":"Santa Barbara","name":"Live Oak
+        Music Festival","longitude":"-120.0183270","latitude":"34.5883900","region":"CA"},"description":null,"on_sale_datetime":null,"ticket_url":"http:\/\/www.bandsintown.com\/event\/6444128\/buy_tickets?app_id=test&artist=Blame+Sally","formatted_datetime":"Saturday,
+        June 15, 2013 at 2:45pm","datetime":"2013-06-15T14:45:00","facebook_rsvp_url":"http:\/\/www.bandsintown.com\/event\/6444128\/facebook_rsvp?app_id=test&artist=Blame+Sally&came_from=67","ticket_type":"Tickets","facebook_share_url":null,"artists":[{"name":"Blame
+        Sally","thumb_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/small.jpg","facebook_tour_dates_url":"http:\/\/bnds.in\/HQt8jZ","image_url":"http:\/\/www.bandsintown.com\/BlameSally\/photo\/medium.jpg","mbid":"b30ac2b1-a4fc-45a3-98ff-9087a6a10208"}],"title":"Blame
+        Sally @ Live Oak Music Festival in Santa Barbara, CA","id":"6444128","ticket_status":"available","formatted_location":"Santa
+        Barbara, CA"}]
 
 '
     http_version: 
-  recorded_at: Thu, 21 Feb 2013 20:15:44 GMT
+  recorded_at: Mon, 22 Apr 2013 22:11:29 GMT
 recorded_with: VCR 2.4.0

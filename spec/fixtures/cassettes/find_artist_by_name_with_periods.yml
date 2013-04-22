@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bandsintown.com/artists/will.i.am?api_version=2.0&app_id=test&format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 22 Apr 2013 22:24:00 GMT
+      Server:
+      - Mongrel 1.1.5
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.01186'
+      Status:
+      - 200 OK
+      Etag:
+      - ! '"549c6124d1ad1958ab50e2ec39f887f6"'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Content-Length:
+      - '268'
+      Set-Cookie:
+      - _session_id=47adc2d2df801da8e72d914fc82ae68d; path=/; expires=Wed, 22 May
+        2013 22:24:00 GMT
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '{"thumb_url":"http:\/\/www.bandsintown.com\/will.i.am\/photo\/small.jpg","facebook_tour_dates_url":null,"name":"will.i.am","upcoming_events_count":2,"mbid":"d574c9bd-46f6-440a-8d6a-8412a283eeb1","image_url":"http:\/\/www.bandsintown.com\/will.i.am\/photo\/medium.jpg"}'
+    http_version: 
+  recorded_at: Mon, 22 Apr 2013 22:24:03 GMT
+recorded_with: VCR 2.4.0

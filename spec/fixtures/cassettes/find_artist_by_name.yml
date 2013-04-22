@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.bandsintown.com/artists/My%20Morning%20Jacket?api_version=2.0&app_id=test
+    uri: https://api.bandsintown.com/artists/My%20Morning%20Jacket?api_version=2.0&app_id=test&format=json
     body:
       encoding: US-ASCII
       string: ''
@@ -13,32 +13,32 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 21 Feb 2013 20:11:50 GMT
+      - Mon, 22 Apr 2013 22:11:25 GMT
       Server:
       - Mongrel 1.1.5
-      Etag:
-      - ! '"f71ae1412f3e37311757d098764b8aad"'
       Cache-Control:
       - private, max-age=0, must-revalidate
-      Status:
-      - 200 OK
       X-Runtime:
-      - '0.04589'
-      Content-Length:
-      - '310'
+      - '0.02214'
+      Etag:
+      - ! '"5e4bd78181166d050303722eb1bf586b"'
       Content-Type:
       - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Content-Length:
+      - '310'
       Set-Cookie:
-      - _session_id=b50f066fa543a15f617acfe11a075bb2; path=/; expires=Thu, 21 Mar
-        2013 19:11:50 GMT
+      - _session_id=0588678713f51a3ee3c682db6f9d0a08; path=/; expires=Wed, 22 May
+        2013 22:11:25 GMT
       Vary:
       - Accept-Encoding
       Connection:
       - close
     body:
       encoding: US-ASCII
-      string: ! '{"mbid":"ea5883b7-68ce-48b3-b115-61746ea53b8c","upcoming_events_count":0,"image_url":"http:\/\/www.bandsintown.com\/MyMorningJacket\/photo\/medium.jpg","thumb_url":"http:\/\/www.bandsintown.com\/MyMorningJacket\/photo\/small.jpg","name":"My
-        Morning Jacket","facebook_tour_dates_url":"http:\/\/bnds.in\/zTPiUu"}'
+      string: ! '{"image_url":"http:\/\/www.bandsintown.com\/MyMorningJacket\/photo\/medium.jpg","name":"My
+        Morning Jacket","mbid":"ea5883b7-68ce-48b3-b115-61746ea53b8c","thumb_url":"http:\/\/www.bandsintown.com\/MyMorningJacket\/photo\/small.jpg","facebook_tour_dates_url":"http:\/\/bnds.in\/zTPiUu","upcoming_events_count":0}'
     http_version: 
-  recorded_at: Thu, 21 Feb 2013 20:11:50 GMT
+  recorded_at: Mon, 22 Apr 2013 22:11:28 GMT
 recorded_with: VCR 2.4.0

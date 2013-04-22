@@ -13,7 +13,7 @@ module Intown
       def options
         {
           :query => {
-             :app_id => Intown.configuration.app_id, :api_version => API_VERSION 
+             :app_id => Intown.configuration.app_id, :api_version => API_VERSION, :format => "json"
           }
         }
       end
