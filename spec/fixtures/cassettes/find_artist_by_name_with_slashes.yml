@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bandsintown.com/artists/Be%252FNon?api_version=2.0&app_id=test&format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 22 Apr 2013 22:23:59 GMT
+      Server:
+      - Mongrel 1.1.5
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      X-Runtime:
+      - '0.01019'
+      Content-Length:
+      - '268'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - ! '"bdf1577ae15a7f3b2d7e95c27251691d"'
+      Set-Cookie:
+      - _session_id=ea8114b3c22b65f23c46ff67b06ef6af; path=/; expires=Wed, 22 May
+        2013 22:23:59 GMT
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '{"facebook_tour_dates_url":null,"thumb_url":"http:\/\/www.bandsintown.com\/Be%252FNon\/photo\/small.jpg","image_url":"http:\/\/www.bandsintown.com\/Be%252FNon\/photo\/medium.jpg","upcoming_events_count":1,"name":"Be\/Non","mbid":"a0abad13-cd8a-4d85-8fd7-eb1e5295411d"}'
+    http_version: 
+  recorded_at: Mon, 22 Apr 2013 22:24:02 GMT
+recorded_with: VCR 2.4.0

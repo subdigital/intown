@@ -13,7 +13,7 @@ module Intown
       def options
         {
           :query => {
-             :app_id => Intown.configuration.app_id, :api_version => API_VERSION 
+             :app_id => Intown.configuration.app_id, :api_version => API_VERSION, :format => "json"
           }
         }
       end
@@ -57,7 +57,8 @@ module Intown
       
       def encode_name(name)
         # periods & slashes cause the API to blow up
-        URI.encode(name).gsub(/\./, "%2E").gsub(/\//, "%2F")
+        # must double-encode the slash
+        URI.encode(name).gsub(/\./, "%2E").gsub(/\//, "%252F")
       end
 
       def musicbrainz_identifier(mbid)
