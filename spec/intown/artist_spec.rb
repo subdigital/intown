@@ -59,11 +59,12 @@ describe Intown::Artist do
   
   describe "invalid response" do
     let(:status_code) { nil }
-    let(:response_body) { nil }
+    let(:response_body) { '{"errors":["app_id param is required"]}' }
     let(:response) {
       stub(:body => response_body, 
            :code => status_code)
     }
+
     before do
       Intown::Artist.should_receive(:get).and_return(response)
     end
@@ -72,13 +73,15 @@ describe Intown::Artist do
       let(:status_code) { 500 }
       it_behaves_like 'error', Intown::InternalServerError
     end
+    context "404 Not Found" do
+      let(:status_code) { 404 }
+      it_behaves_like 'error', Intown::InvalidRequestError
+    end
+
     context "406 Not Acceptable" do
       let(:status_code) { 406 }
-      it "should raise an invalid request error" do
-        expect { Intown::Artist.fetch(:name => "Jr. Doc") }.to raise_error Intown::InvalidRequestError
-      end
+      it_behaves_like 'error', Intown::InvalidRequestError
     end
-    
   end
 
 end
