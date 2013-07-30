@@ -12,3 +12,5 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.allow_http_connections_when_no_cassette = true
 end
+
+Dir["./spec/support/**/*.rb"].sort.each {|f| require f}

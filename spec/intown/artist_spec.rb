@@ -67,6 +67,11 @@ describe Intown::Artist do
     before do
       Intown::Artist.should_receive(:get).and_return(response)
     end
+
+    context "500 Internal Server Error" do
+      let(:status_code) { 500 }
+      it_behaves_like 'error', Intown::InternalServerError
+    end
     context "406 Not Acceptable" do
       let(:status_code) { 406 }
       it "should raise an invalid request error" do
