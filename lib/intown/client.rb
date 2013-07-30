@@ -20,7 +20,8 @@ module Intown
 
       def process_response(response)
         case response.code
-        when 500 then raise Intown::InvalidRequestError, response.body
+        when 500 then internal_server_error(response)
+        when 502 then bad_gateway(response)
         when 404 then process_not_found(response)
         when 406 then process_not_acceptable(response)
         else
@@ -46,6 +47,14 @@ module Intown
           raise Intown::InvalidRequestError, "app_id is required for this request" if errors.any? {|e| e =~ /app_id param is required/}
         end
         nil
+      end
+
+      def internal_server_error(response)
+        raise Intown::InternalServerError, "Bandsintown returned a 500 internal server error. Please retry this request later."
+      end
+
+      def bad_gateway(response)
+        raise Intown::BadGatewayError, "Bandsintown returned a 502 proxy error. Please retry this request later."
       end
 
       def artist_identifier(params)
