@@ -73,6 +73,12 @@ describe Intown::Artist do
       let(:status_code) { 500 }
       it_behaves_like 'error', Intown::InternalServerError
     end
+
+    context "502 Bad Gateway" do
+      let(:status_code) { 502 }
+      it_behaves_like 'error', Intown::BadGatewayError
+    end
+
     context "404 Not Found" do
       let(:status_code) { 404 }
       it_behaves_like 'error', Intown::InvalidRequestError
