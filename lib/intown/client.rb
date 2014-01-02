@@ -36,7 +36,7 @@ module Intown
           end
         end
       end
-      
+
       def process_not_acceptable(response)
         raise Intown::InvalidRequestError, "Bandsintown rejected your request.  Please check your input parameters."
       end
@@ -63,11 +63,13 @@ module Intown
         return encode_name(params[:name]) if params[:name]
         raise ArgumentError, "params must contain one of mbid, fbid, or name"
       end
-      
+
       def encode_name(name)
         # periods & slashes cause the API to blow up
         # must double-encode the slash
-        URI.encode(name).gsub(/\./, "%2E").gsub(/\//, "%252F")
+        # question marks break the api as well
+        sanitized_name = name.gsub(/\?/, "").strip
+        URI.encode(sanitized_name).gsub(/\./, "%2E").gsub(/\//, "%252F")
       end
 
       def musicbrainz_identifier(mbid)
