@@ -35,6 +35,8 @@ module Intown
             json_response
           end
         end
+      rescue JSON::ParserError => e
+        invalid_response_error(response)
       end
 
       def process_not_acceptable(response)
@@ -55,6 +57,10 @@ module Intown
 
       def bad_gateway(response)
         raise Intown::BadGatewayError, "Bandsintown returned a 502 proxy error. Please retry this request later."
+      end
+
+      def invalid_response_error(response)
+        raise Intown::InvalidResponseError, "JSON parsing the Bandsintown response failed with: status_code: #{response.code}, body: #{response.body}"
       end
 
       def artist_identifier(params)

@@ -28,14 +28,14 @@ describe Intown::Artist do
         Intown::Artist.fetch(:name => "Foo Fighters")
       end
     end
-    
+
     context "searching by name with periods in the name" do
       it "should URL encode the period" do
         Intown::Artist.should_receive(:get).with(/\/artists\/Jr%2E%20Doc/, anything).and_return(response)
-        Intown::Artist.fetch(:name => "Jr. Doc")        
+        Intown::Artist.fetch(:name => "Jr. Doc")
       end
     end
-    
+
     context "searching by name with a /" do
       it "should double encode the slash" do
         Intown::Artist.should_receive(:get).with(/\/artists\/Is%252FIs/, anything).and_return(response)
@@ -56,12 +56,12 @@ describe Intown::Artist do
       end
     end
   end
-  
+
   describe "invalid response" do
     let(:status_code) { nil }
     let(:response_body) { '{"errors":["app_id param is required"]}' }
     let(:response) {
-      stub(:body => response_body, 
+      stub(:body => response_body,
            :code => status_code)
     }
 
@@ -87,6 +87,16 @@ describe Intown::Artist do
     context "406 Not Acceptable" do
       let(:status_code) { 406 }
       it_behaves_like 'error', Intown::InvalidRequestError
+    end
+
+    context "Invalid JSON response" do
+      let(:status_code) { 200 }
+      let(:response_body) { "<html>Boom!</html>" }
+      it_behaves_like 'error', Intown::InvalidResponseError
+
+      it "should return a useful error" do
+        expect { Intown::Artist.fetch(:name => "Jr. Doc") }.to raise_error Intown::InvalidResponseError, "JSON parsing the Bandsintown response failed with: status_code: 200, body: <html>Boom!</html>"
+      end
     end
   end
 
